@@ -29,6 +29,9 @@ public class HomeController {
         String id = request.getParameter("id");
         String id2 = request.getParameter("id2");
         
+        if(id.equals("")) id = "parameter was empty";
+        if(id2.equals("")) id2 = "parameter was empty";
+        
         mav.addObject("id",id);
         mav.addObject("id2",id2);
         
